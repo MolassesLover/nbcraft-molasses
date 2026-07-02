@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeFlags = [
+    "-D NBC_SYSTEM_STB=ON" # Required by NBC_NIX_BUILD
     "-D NBC_NIX_BUILD=ON"
     "-D CMAKE_C_COMPILER=${clang}/bin/clang"
     "-D CMAKE_CXX_COMPILER=${clang}/bin/clang++"
